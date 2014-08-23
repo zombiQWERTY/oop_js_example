@@ -34,7 +34,7 @@
 			} else {
 				$element.removeClass("input--fail, input--success")
 			}
-		}
+		};
 
 		_normalBehavior = function() { // Private method
 			if (_checkEmail(elementValue)) {
@@ -42,13 +42,13 @@
 			} else {
 				_changeState("error");
 			}
-		}
+		};
 
 		_checkEmail = function(email) {
 			var pattern; // Ругулярка это regExp или pattern
 			pattern = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 			return pattern.test(email);
-		}
+		};
 
 		return Validators; // Вызов конструктора
 
